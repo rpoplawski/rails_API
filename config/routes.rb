@@ -39,6 +39,5 @@ Rails.application.routes.draw do
   #patch  '/items/:id',  to:   'items#update'
    put    '/items/:id',  to:   'items#update'
    delete '/items/:id',  to:   'items#destroy'
-
 end
 
