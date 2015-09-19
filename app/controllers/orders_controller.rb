@@ -67,7 +67,6 @@ class OrdersController < ApplicationController
         order.user_id = params[:user_id]  unless params[:user_id].nil?  || params[:user_id].empty?
         order.quantity = params[:quantity] unless params[:quantity].nil? || params[:quantity].empty?
         order.save
-        #update_order_status = Order.update(params[:id], completed: params[:completed])
         render json: order.to_json, status: 200
      else
       render json: { error_msg: 'Record Not Found!', id: params[:id] }.to_json, status: 404
