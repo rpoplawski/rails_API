@@ -62,8 +62,8 @@ class OrdersController < ApplicationController
     #render text: "params : #{params.inspect}"
     #if params[:item_id].exists? && params[:user_id].exists? && params[:quantity].exists?
     if Order.exists?(params[:id])
-      order = Order.find(params[:id])
-      order.destroy
+      order = Order.find(params[:id]).destroy
+     #order.destroy
       render json: { message: "Order deleted successfully." }, status: 200
     else
       render json: { error_msg: 'Record Not Found!', id: params[:id] }.to_json, status: 404
