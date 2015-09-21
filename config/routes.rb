@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
 
 #resource :orders
-  get '/orders',             to: 'orders#index'
-  post '/orders',            to: 'orders#create'
-  get  '/orders/new',        to: 'orders#new'
-  get  '/orders/edit',       to: 'orders#edit'
-  get  '/orders/:id',        to: 'orders#show'
- #patch 'orders/:id',        to: 'orders#update'
-  put   '/orders/:id',       to: 'orders#update'
-  delete '/orders/:id',      to: 'orders#destroy'
+  get    '/orders',             to: 'orders#index'
+  post   '/orders',             to: 'orders#create'
+  get    '/orders/new',         to: 'orders#new'
+  get    '/orders/edit',        to: 'orders#edit'
+  get    '/orders/:id',         to: 'orders#show'
+ #patch  'orders/:id',          to: 'orders#update'
+  put    '/orders/:id',         to: 'orders#update'
+  delete '/orders/:id',         to: 'orders#destroy'
 
 #resource :users
   get    '/users',          to: 'users#index'

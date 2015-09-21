@@ -22,6 +22,29 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+---------------------------
+Rails API
+___________________________
+
+
+Each user should have a first_name, last_name, and age.
+
+Each order should have an item_id and a user_id and a quantity field.
+
+Each address should have a user_id, street_name, city, state, and zip.
+
+Each item should have a name, a price, and a description.
+
+
+The underlying pirpose of this app is to demostrate to the user that commands such as POST and DELETE can be used to create data and destroy it. Here's how it works:
+
+Sending a POST request to http://localhost:3000/orders with the params of item_id, quantity, and user_id should create a new order returned to the user of the programme as JSON (Using Postman)
+
+Sending a DELETE request to http://localhost:3000/orders/ID should delete that order from the database and return the message “deleted” as JSON (Using Postman).
+
+ENJOY!!!
+
+___________________
 
 
 Please feel free to use a different markup language if you do not plan to run
