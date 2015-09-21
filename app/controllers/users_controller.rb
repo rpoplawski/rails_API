@@ -23,16 +23,12 @@ class UsersController < ApplicationController
 
   def create
     #render text: "params : #{params.inspect}"
-    if params[:body].nil? || params[:body].empty?
-      err_msg = "The 'message' parameter was empty or not found"
-      render json: { error_msg: err_msg }.to_json, status: 422
-    else
-      # user = User.create(body: params[:body]) => this is the same as the (3) lines below
       user = User.new
-      user.body = params[:body]
+      user.first_name = params[:first_name]
+      user.last_name =  params[:last_name]
+      user.age =        params[:age]
       user.save
       render json: user.to_json, status: 201
-    end
   end
 
   def destroy
